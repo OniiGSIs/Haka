@@ -206,7 +206,7 @@ public class yGSI implements CommandBundle<For> {
         }));
         registry.register(new SimpleCommand("/url2gsi", this::initialStage));
         registry.register(new SimpleCommand("/url2sgsi", this::initialStage));
-        registry.register(new SimpleCommand("/gsi", this::initialStage));
+        registry.register(new SimpleCommand("/loligsi", this::initialStage));
     }
 
     // Enable SpellCheckingInspection since url2sgsi isn't a typo.
@@ -346,7 +346,7 @@ public class yGSI implements CommandBundle<For> {
         InputStreamReader inputStreamReader = null;
         BufferedReader bufferedReader = null;
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("<code>-> [Hakalle] I am setting all the variables for the porting process to begin, so please wait a moment...</code>");
+        stringBuilder.append("<code>-> [Loli] Preparing...</code>");
 
         // Delete the inline query message.
         DeleteMessageMethod deleteMessageMethod = new DeleteMessageMethod();
@@ -514,7 +514,7 @@ public class yGSI implements CommandBundle<For> {
             }
 
             // Upload the built GSI stuff into SourceForge.
-            stringBuilder.append("\n").append("<code>-> [Hakalle] Upload all SGSI files built to SourceForge...</code>");
+            stringBuilder.append("\n").append("<code>-> [Loli] Uploading to SourceForge...</code>");
             editMessageTextMethodWithoutMarkup.setText(String.valueOf(stringBuilder))
                     .callAsync(callbackQueryContext.sender);
 
